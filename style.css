@@ -623,15 +623,63 @@ body {
 
 .footer {
     text-align: center;
-    padding: 2rem;
-    margin-top: 2rem;
-    color: var(--text-secondary);
+    padding: 3rem 2rem;
+    margin-top: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.developer-credit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    animation: fadeIn 1s ease-out;
+}
+
+.dev-label {
     font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-weight: 500;
+}
+
+.dev-name {
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background: linear-gradient(135deg, #fff 0%, var(--primary-light) 50%, var(--secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+.dev-name::after {
+    content: 'ARSLAN SOLEHRIA';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: blur(20px);
+    opacity: 0.5;
+    z-index: -1;
 }
 
 .footer-note {
     color: var(--text-muted);
-    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    opacity: 0.7;
 }
 
 /* ==================== TOAST NOTIFICATION ==================== */
